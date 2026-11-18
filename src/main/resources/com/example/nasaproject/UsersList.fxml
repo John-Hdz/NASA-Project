@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.geometry.Insets?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.nasaproject.Controladores.funtions.UsersListController"
+      alignment="CENTER" minWidth="1066" minHeight="650" spacing="10">
+
+    <padding>
+        <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
+    </padding>
+    <Label text="Users Control" style="-fx-font-size: 25"/>
+
+    <TableView fx:id="usersTable" maxHeight="500" minHeight="500">
+        <columns>
+            <TableColumn fx:id="idUsuarioColumn" text="ID User" minWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="idUsuario"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="cveUsuarioColumn" text="User Key" minWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="cveUsuario"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="emailColumn" text="Email" minWidth="200">
+                <cellValueFactory>
+                    <PropertyValueFactory property="email"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="nombreUsuarioColumn" text="First Name" minWidth="150">
+                <cellValueFactory>
+                    <PropertyValueFactory property="nombreUsuario" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="apellidosColumn" text="Last name" minWidth="150">
+                <cellValueFactory>
+                    <PropertyValueFactory property="apellidos"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="fechaNacColumn" text="Birthday" minWidth="155">
+                <cellValueFactory>
+                    <PropertyValueFactory property="fechaNac"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="nacionalidadColumn" text="Nationality" minWidth="150">
+                <cellValueFactory>
+                    <PropertyValueFactory property="nacionalidad" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button fx:id="updateButton" minWidth="100" onAction="#UpdateButtonClick">
+            <graphic>
+                <FontIcon iconLiteral="fas-upload" styleClass="btn, btn-primary"/>
+            </graphic>
+        </Button>
+        <Button fx:id="deleteButton" minWidth="100" onAction="#DeleteButtonClick">
+            <graphic>
+                <FontIcon iconLiteral="fas-trash-alt" styleClass="btn, btn-danger"/>
+            </graphic>
+        </Button>
+    </HBox>
+
+</VBox>

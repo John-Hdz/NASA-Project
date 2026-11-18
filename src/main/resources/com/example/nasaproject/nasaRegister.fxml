@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.nasaproject.Controladores.funtions.RegisterController"
+      alignment="CENTER" spacing="20" style="-fx-background-color: #1a1a1c; -fx-padding: 20;" minWidth="1066" minHeight="650" >
+
+    <VBox alignment="CENTER" spacing="30">
+        <FontIcon iconLiteral="fltfmz-person-28" iconSize="100" iconColor="white"/>
+        <Label text="NASA USER REGISTER" style="-fx-font-family: 'Montserrat Black'; -fx-font-size: 28; -fx-text-fill: white; -fx-font-weight: bold;"/>
+    </VBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Username:" style="-fx-font-family: 'Montserrat'; -fx-font-size: 18; -fx-text-fill: white;"/>
+        <TextField fx:id="txtfirstName" promptText="Name *" style="-fx-font-family: 'Montserrat'; -fx-font-size: 18; -fx-border-color: grey; -fx-border-width: 0 0 1 0; -fx-background-color: transparent; -fx-text-fill: white;"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Last Name:" style="-fx-font-family: 'Montserrat'; -fx-font-size: 18; -fx-text-fill: white;"/>
+        <TextField fx:id="txtlastName" promptText="Last Name" style="-fx-font-family: 'Montserrat'; -fx-font-size: 18; -fx-border-color: grey; -fx-border-width: 0 0 1 0; -fx-background-color: transparent; -fx-text-fill: white;"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Email:" style="-fx-font-family: 'Montserrat'; -fx-font-size: 18; -fx-text-fill: white;"/>
+        <TextField fx:id="txtEmail" promptText="example@email.com *" style="-fx-font-family: 'Montserrat'; -fx-font-size: 18; -fx-border-color: grey; -fx-border-width: 0 0 1 0; -fx-background-color: transparent; -fx-text-fill: white;"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Password:" style="-fx-font-family: 'Montserrat'; -fx-font-size: 18; -fx-text-fill: white;"/>
+        <PasswordField fx:id="txtPassword" promptText="Password *" style="-fx-font-family: 'Montserrat'; -fx-font-size: 18; -fx-border-color: grey; -fx-border-width: 0 0 1 0; -fx-background-color: transparent; -fx-text-fill: white;"/>
+    </HBox>
+
+    <Button text="REGISTER" style="-fx-background-color: #378412; -fx-text-fill: white; -fx-font-family: 'Montserrat'; -fx-font-size: 20; -fx-font-weight: bold;"
+    maxHeight="30" onAction="#onRegisterButtonClick">
+        <graphic>
+            <FontIcon iconLiteral="fltfal-checkmark-12" iconSize="20" iconColor="white"/>
+        </graphic>
+    </Button>
+    <Button fx:id="singUp" onAction="#onLoginButtonClick" text="Already you have an account? Log in"  style="-fx-font-size: 12px; -fx-text-fill: #183aac; -fx-background-color: rgba(255,255,255,0)"/>
+
+</VBox>

@@ -1,0 +1,58 @@
+# Environment variables & secrets
+.env
+.env.*
+!.env.example
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+### Generated Reports, Logs & Runtime Downloads ###
+Reportes/
+*.log
+video.mp4
+src/main/resources/DownloadImages/*.jpg
+src/main/resources/DownloadImages/*.png
+!src/main/resources/DownloadImages/dont_found.png
+src/main/resources/EpicImages/*.png
+!src/main/resources/EpicImages/dont_found.png
+src/main/resources/DownloadImgLibrary/video.mp4
+src/main/resources/DownloadImgLibrary/prueba.jpg
+
+### OS ###
+.DS_Store
+Thumbs.db

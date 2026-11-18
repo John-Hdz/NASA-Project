@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import org.kordamp.ikonli.javafx.*?>
+
+<HBox xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.nasaproject.Controladores.funtions.HomeController">
+    <VBox alignment="TOP_CENTER" minWidth="300" spacing="10" style="-fx-background-color: #1e1e25;">
+        <Label minHeight="15" />
+        <HBox alignment="CENTER" minWidth="300" spacing="15">
+            <ImageView fitWidth="70" preserveRatio="true">
+                <Image url="@/NASA LOGO/astronaut.jpg" />
+            </ImageView>
+            <VBox alignment="CENTER_LEFT" spacing="2">
+                <Label fx:id="txtUser" alignment="CENTER" style="-fx-font-size: 14" text="Guest" />
+                <Label fx:id="txtEmail" alignment="CENTER" style="-fx-font-size: 14" text="" />
+            </VBox>
+        </HBox>
+        <Label minHeight="10" />
+        <Button fx:id="btnAccountSettings" alignment="CENTER_LEFT" minWidth="300" onAction="#onLoadCountSettingsButtonClick" style="-fx-background-color: rgba(255,255,255,0); -fx-font-size: 18;" text=" Account Settings">
+            <graphic>
+                <FontIcon iconColor="#ffffff" iconLiteral="fas-user-cog" iconSize="20" />
+            </graphic>
+        </Button>
+        <Button fx:id="btnSearchHistory" alignment="CENTER_LEFT" minWidth="300" onAction="#onMostHistorialButtonClick" style="-fx-background-color: rgba(255,255,255,0); -fx-font-size: 18;" text=" Search History">
+            <graphic>
+                <FontIcon iconColor="#ffffff" iconLiteral="fas-history" iconSize="20" />
+            </graphic>
+        </Button>
+        <Button fx:id="btnReviews" alignment="CENTER_LEFT" minWidth="300" onAction="#onMostComentariosButtonClick" style="-fx-background-color: rgba(255,255,255,0); -fx-font-size: 18;" text=" Reviews">
+            <graphic>
+                <FontIcon iconColor="#ffffff" iconLiteral="far-edit" iconSize="20" />
+            </graphic>
+        </Button>
+        <Button fx:id="btnUserControl" alignment="CENTER_LEFT" minWidth="300" onAction="#onMostUsuariosButtonClick"
+                style="-fx-background-color: rgba(255,255,255,0); -fx-font-size: 18;" text=" User Control" visible="false">
+            <graphic>
+                <FontIcon iconColor="#ffffff" iconLiteral="fas-users-cog" iconSize="20" />
+            </graphic>
+        </Button>
+        <Button fx:id="btnUser_searches" alignment="CENTER_LEFT" minWidth="300" onAction="#onMostUserSearchesButtonClick"
+                style="-fx-background-color: rgba(255,255,255,0); -fx-font-size: 18;" text=" User Searches" visible="false">
+            <graphic>
+                <FontIcon iconColor="#ffffff" iconLiteral="fas-user-clock" iconSize="20" />
+            </graphic>
+        </Button>
+        <Button fx:id="btnDownloadReport" alignment="CENTER_LEFT" minWidth="300" onAction="#onloadReporButtonClick"
+                style="-fx-background-color: rgba(255,255,255,0); -fx-font-size: 18;" text=" DownloadReport" visible="false">
+            <graphic>
+                <FontIcon iconColor="#ffffff" iconLiteral="fas-cloud-download-alt" iconSize="20" />
+            </graphic>
+        </Button>
+        <Button fx:id="btnAPIS_configuration" alignment="CENTER_LEFT" minWidth="300" onAction="#onLoadConfAPISButtonClick"
+                style="-fx-background-color: rgba(255,255,255,0); -fx-font-size: 18;" text=" API's Configuration" visible="false">
+            <graphic>
+                <FontIcon iconColor="#ffffff" iconLiteral="fas-key" iconSize="20" />
+            </graphic>
+        </Button>
+        <Button fx:id="btnGuestMode" alignment="CENTER_LEFT" minWidth="300" onAction="#onloasdGuestModeButtonClick"
+                style="-fx-background-color: rgba(255,255,255,0); -fx-font-size: 18;" text=" Sing Up" visible="false">
+            <graphic>
+                <FontIcon iconColor="#ffffff" iconLiteral="fas-user-plus" iconSize="20" />
+            </graphic>
+        </Button>
+
+            <ImageView fitWidth="115" preserveRatio="true" >
+                <Image url="@/NASA LOGO/expediiton_logo.png" />
+            </ImageView>
+    </VBox>
+        <Pane fx:id="fondoPrincipal">
+            <fx:include source="welcome.fxml" />
+        </Pane>
+</HBox>

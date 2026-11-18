@@ -1,0 +1,26 @@
+/*====================== Label ===========================*/
+.label {
+    -fx-text-fill: text_color;
+    -fx-font-family: "JetBrains Mono";
+}
+
+/*====================== Text ===========================*/
+Text {
+    -fx-font-family: "JetBrains Mono";
+    -fx-fill: text_color;
+}
+
+/*=================== Other styles ======================*/
+.text {
+    -fx-font-family: "JetBrains Mono";
+}
+
+.label.header, .label.header .text {
+    -fx-font-size: 3.5em;
+    -fx-font-family: "JetBrains Mono";
+}
+
+.label.item-title, .label.item-title .text {
+    -fx-font-size: 1em;
+    -fx-font-family: "JetBrains Mono";
+}

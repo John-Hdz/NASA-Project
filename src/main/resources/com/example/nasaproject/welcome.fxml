@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.Label?>
+<StackPane xmlns="http://javafx.com/javafx" minWidth="1066" minHeight="650"
+           xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.nasaproject.Controladores.funtions.welcomeController">
+        <ImageView fitHeight="700" preserveRatio="true" opacity="0.25">
+            <Image url="@/NASA LOGO/Home.png"/>
+        </ImageView>
+    <VBox alignment="CENTER">
+        <ImageView fitWidth="250" preserveRatio="true">
+            <Image url="@/NASA LOGO/spmu.png"/>
+        </ImageView>
+        <Label text="Welcome Back" alignment="CENTER" style=" -fx-font-size: 80"/>
+            <Label fx:id="UserTitle" text="User" alignment="CENTER" style=" -fx-font-size: 80"/>
+    </VBox>
+</StackPane>

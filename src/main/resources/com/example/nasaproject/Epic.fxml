@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<BorderPane style="-fx-background-color: #000000;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="com.example.nasaproject.Controladores.servicios.EpicController">
+
+    <!-- Parte superior con logo de la NASA y texto EPIC -->
+    <top>
+        <BorderPane style="-fx-background-color: #153ea4;">
+            <center>
+                <Label style="-fx-text-fill: white; -fx-font-size: 45px" text="EPIC" />
+            </center>
+
+        </BorderPane>
+    </top>
+
+    <center>
+        <HBox alignment="CENTER" spacing="30">
+            <Button onAction="#onRotarIzquierdaButtonClick" style="-fx-background-color: rgba(255,255,255,0)"
+                    minWidth="50" minHeight="50">
+                <graphic>
+                    <FontIcon iconLiteral="fas-angle-double-left" iconSize="20" iconColor="#727880"/>
+                </graphic>
+            </Button>
+            <VBox alignment="CENTER" >
+                <ImageView fx:id="mainImageView" fitHeight="450" preserveRatio="true" />
+                <Label fx:id="txtDescription" contentDisplay="CENTER"  style="-fx-font-size: 14" alignment="CENTER"/>
+            </VBox>
+            <Button onAction="#onRotarDerechaButtonClick" style="-fx-background-color: rgba(255,255,255,0)"
+                    minWidth="50" minHeight="50">
+                <graphic>
+                    <FontIcon iconLiteral="fas-angle-double-right" iconSize="20" iconColor="#727880"/>
+                </graphic>
+            </Button>
+        </HBox>
+    </center>
+
+    <!-- Parte inferior con logo de la NASA en azul oscuro -->
+    <bottom>
+        <BorderPane maxHeight="100" style="-fx-background-color: #001b3a;">
+            <left>
+                <Label minWidth="110"/>
+            </left>
+            <center>
+                <ImageView fitHeight="50" preserveRatio="true">
+                    <Image url="@/NASA LOGO/NASA.png" />
+                </ImageView>
+            </center>
+            <right>
+                <Button fx:id="Reload" onAction="#onReloadButtonClick" alignment="BOTTOM_RIGHT" text=" Reload page" style="-fx-background-color: rgba(255,255,255,0)" >
+                    <graphic>
+                        <FontIcon iconLiteral="fas-sync" iconSize="10" iconColor="#727880"/>
+                    </graphic>
+                </Button>
+            </right>
+        </BorderPane>
+    </bottom>
+
+    <right>
+        <VBox minWidth="200" alignment="CENTER_LEFT">
+            <Label fx:id="txtRightDescription" alignment="CENTER" style="-fx-font-size: 13"/>
+        </VBox>
+    </right>
+
+    <left>
+        <VBox minWidth="200" alignment="CENTER_RIGHT">
+            <Label fx:id="txtLeftDescription" alignment="CENTER" style="-fx-font-size: 13"/>
+        </VBox>
+    </left>
+
+</BorderPane>

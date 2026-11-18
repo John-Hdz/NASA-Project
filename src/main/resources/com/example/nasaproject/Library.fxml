@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<BorderPane
+            xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/17.0.2-ea"
+            fx:controller="com.example.nasaproject.Controladores.servicios.LibraryController"
+            prefWidth="600" prefHeight="400">
+
+<top>
+    <Pane>
+        <ImageView fx:id="imgT" fitWidth="1370" fitHeight="110">
+            <Image url="@/t.jpg"/>
+        </ImageView>
+
+        <Label text="NASA Image and"
+               style="-fx-text-fill:  white; -fx-font-size: 20px; -fx-font-family: 'Courier New';-fx-font-weight: bold;"
+               translateX="1000.0" translateY="40.0"/>
+        <Label text="Video Library"
+               style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-family: 'Courier New';-fx-font-weight: bold;"
+               translateX="1010.0" translateY="60.0"/>
+        <ImageView fx:id="imgN" fitHeight="110" fitWidth="150" translateX="1150">
+            <Image url="/nasa.png"/>
+        </ImageView>
+
+        <TextField fx:id="txtfieldBusqueda" prefWidth="450" prefHeight="40" translateX="100" translateY="20"/>
+        <Button fx:id="Buscar" text="SEARCH" onAction="#onSearchButtonClick" prefHeight="40" prefWidth="100" translateX="560" translateY="20">
+            <graphic>
+                <FontIcon iconColor="black" iconLiteral="fas-search" iconSize="20"/>
+            </graphic>
+        </Button>
+
+        <HBox translateX="120" spacing="15" translateY="60" style="-fx-background-color: #1a1a1c;" minWidth="340" minHeight="35" alignment="CENTER">
+                <CheckBox fx:id="CBimagenes" text="IMAGENES" style="-fx-font-size: 15;  -fx-text-fill: white" selected="true"/>
+                <CheckBox fx:id="CBAudios" text="AUDIOS" style="-fx-font-size: 15;  -fx-text-fill: white" />
+                <CheckBox fx:id="CBVideos" text="VIDEOS" style="-fx-font-size: 15; -fx-text-fill: white" />
+        </HBox>
+
+    </Pane>
+</top>
+
+
+    <center>
+        <ScrollPane>
+        <FlowPane fx:id="FPCentroImagenes" minWidth="1350" alignment="CENTER" vgap="10" hgap="10"/>
+        </ScrollPane>
+    </center>
+
+
+    <bottom>
+        <StackPane maxHeight="40">
+
+            <ImageView fitWidth="1370" fitHeight="40">
+                <Image url="/planetados.jpg"/>
+            </ImageView>
+
+            <ImageView fitHeight="40" fitWidth="150" translateX="-600" preserveRatio="true">
+                <Image url="/nasa.png"/>
+            </ImageView>
+            <Label text="National Aeronautics and Space Administration "
+                   style="-fx-text-fill:  white; -fx-font-size: 11px; -fx-font-family: 'Arial Black';-fx-font-weight: bold;"
+                   translateX="-350.0" translateY="-7.0"/>
+            <Label text="NASA Official: NASA Office of Communications"
+                   style="-fx-text-fill: white; -fx-font-size: 11px; -fx-font-family: 'Arial Black';-fx-font-weight: bold;"
+                   translateX="-350.0" translateY="10.0"/>
+
+        </StackPane>
+    </bottom>
+
+</BorderPane>

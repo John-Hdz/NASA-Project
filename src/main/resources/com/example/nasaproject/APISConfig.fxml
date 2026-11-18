@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.nasaproject.Controladores.funtions.APISConfigController"
+            prefHeight="400.0" prefWidth="600.0" alignment="CENTER" minWidth="1066" minHeight="650">
+        <VBox alignment="CENTER" spacing="20">
+            <Label text="API CONFIGURATION" style="-fx-font-family: Montserrat; -fx-font-size:45; -fx-font-weight: bold;-fx-text-fill: white"/>
+            <HBox  spacing="10">
+                <Label text="API KEY" style="-fx-font-family: Montserrat; -fx-font-size: 30;-fx-text-fill: white"/>
+                <TextField fx:id="txtapiKey" style="-fx-font-size: 30" minWidth="800"/>
+            </HBox>
+
+            <HBox  spacing="10" >
+                <Label text="APOD" style="-fx-font-family: Montserrat; -fx-font-size: 30;-fx-text-fill: white"/>
+                <TextField fx:id="txtapiApod" minWidth="700" style="-fx-font-size: 30"/>
+            </HBox>
+
+            <HBox  spacing="10" >
+                <Label text="EPIC" style="-fx-font-family: Montserrat; -fx-font-size: 30;-fx-text-fill: white"/>
+                <TextField fx:id="txtapiEpic" minWidth="700" style="-fx-font-size: 30"/>
+            </HBox>
+            <HBox  spacing="10" >
+                <Label text="LIBRARY" style="-fx-font-family: Montserrat; -fx-font-size: 30;-fx-text-fill: white"/>
+                <TextField fx:id="textapiLibrary" minWidth="700" style="-fx-font-size: 30"/>
+            </HBox>
+            <HBox spacing="30" alignment="CENTER">
+                <Button text="UPDATE" onAction="#onUpdateButtonClick" style="-fx-font-size: 30;-fx-font-family: 'Montserrat Black';-fx-text-fill: green"/>
+            </HBox>
+        </VBox>
+
+</HBox>

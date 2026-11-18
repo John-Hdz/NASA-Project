@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.nasaproject.Controladores.funtions.historialController"
+      prefHeight="650" prefWidth="1066" alignment="CENTER" spacing="10">
+
+<Label text="SEARCH HISTORY" style="-fx-font-size: 25"/>
+    <TableView fx:id="tblHistorial" prefHeight="400" maxWidth="1000">
+        <columns>
+            <TableColumn text="ID" minWidth="140">
+                <cellValueFactory>
+                    <PropertyValueFactory property="idHistorial" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="EMAIL" minWidth="250">
+                <cellValueFactory>
+                    <PropertyValueFactory property="email" />
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn text="SEARCH" minWidth="300">
+                <cellValueFactory>
+                    <PropertyValueFactory property="busqueda" />
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn  text="DATE" minWidth="300">
+                <cellValueFactory>
+                    <PropertyValueFactory property="fechaBusqueda" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+
+    <Button minWidth="100" minHeight="30" styleClass="btn, btn-danger" onAction="#onDeleteSearchButtonClick">
+        <graphic>
+            <FontIcon iconLiteral="fas-trash-alt" iconSize="20" iconColor="#ffffff"/>
+        </graphic>
+    </Button>
+
+</VBox>

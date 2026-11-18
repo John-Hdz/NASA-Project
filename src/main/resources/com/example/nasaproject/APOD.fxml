@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<VBox  style="-fx-background-color: #1a1a1c" xmlns="http://javafx.com/javafx/17.0.2-ea"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.nasaproject.Controladores.servicios.APODController"
+      fx:id="VboxAPOD" alignment="CENTER">
+
+            <Label fx:id="Title" alignment="CENTER" text="Astronomy Picture of the Day" style="-fx-font-size: 30"/>
+            <ScrollPane fx:id="ScrollAPOD" >
+                <HBox spacing="15">
+                    <ImageView fx:id="Imagen"/>
+                    <VBox spacing="20" alignment="TOP_CENTER" maxWidth="300">
+                        <Text fx:id="txtDescripcion" textAlignment="JUSTIFY"/>
+                        <Button text="Download" onAction="#onDownloadButtonClick" minWidth="200"/>
+                    </VBox>
+                </HBox>
+            </ScrollPane>
+
+</VBox>
